@@ -5,7 +5,7 @@ basic features: <br>
 2) Edit those cool emails <br>
 3) Send those cool emails <br>
 4) Some kind of preview for those cool emails <br>
-5) Recieve other emails (they might not be cool) <br>
+5) Save emails as html <br>
 <hr>
 <br>
 <br>

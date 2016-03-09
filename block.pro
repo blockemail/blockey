@@ -15,9 +15,24 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    smtpclient.cpp
+    smtpclient.cpp \
+    mimemessage.cpp \
+    mimepart.cpp \
+    mimecontentformatter.cpp \
+    mimemultipart.cpp \
+    mimetext.cpp \
+    emailaddress.cpp \
+    quotedprintable.cpp
 
 HEADERS  += mainwindow.h \
-    smtpclient.h
+    smtpclient.h \
+    smtpmime.h \
+    mimemessage.h \
+    mimepart.h \
+    mimecontentformatter.h \
+    mimemultipart.h \
+    mimetext.h \
+    emailaddress.h \
+    qoutedprintable.h
 
 FORMS    += mainwindow.ui

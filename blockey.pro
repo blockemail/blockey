@@ -13,9 +13,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    loginform.cpp \
+    simpletextform.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    loginform.h \
+    simpletextform.h
 
 SOURCES += \
     src/emailaddress.cpp \
@@ -48,4 +52,6 @@ HEADERS  += \
     src/smtpexports.h
 
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    loginform.ui \
+    simpletextform.ui

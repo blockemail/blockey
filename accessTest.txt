@@ -1,0 +1,4 @@
+login = htmlblockeditor@gmail.com
+pass = blockemail1234
+sender("your_email_address@host.com", "Your Name")
+to("blockemail@mailinator.com","sup")

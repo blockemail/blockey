@@ -18,7 +18,7 @@ void SimpleTextForm::send(){
     MimeMessage message;
     EmailAddress sender("your_email_address@host.com", "Your Name");
     message.setSender(&sender);
-    EmailAddress to("blockemail@mailinator.com","sup");
+    EmailAddress to(ui->recepientLineEdit->text(),"sup");
     message.addRecipient(&to);
     message.setSubject("Demo");
     MimeText text;
@@ -27,6 +27,8 @@ void SimpleTextForm::send(){
 
     if (!emailCore->sendMail(message)) {
         qDebug() << "Failed to send mail!" << endl;
+    } else {
+        QMessageBox::information(0, "Information", "Message send succesfully!");
     }
 
 }

@@ -7,6 +7,7 @@ LoginForm::LoginForm(SmtpClient *email,QWidget *parent) :
 {
     emailCore = email;
     ui->setupUi(this);
+    ui->emailLineEdit->setValidator(new QRegExpValidator( QRegExp( "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}"),this ) );
     connect(ui->loginButton,SIGNAL(clicked(bool)),this,SLOT(login()));
 }
 
@@ -15,8 +16,13 @@ LoginForm::~LoginForm()
     delete ui;
 }
 void LoginForm::login(){
-    emailCore->setUser(/*ui->emailLineEdit->text()*/"htmlblockeditor@gmail.com");
-    emailCore->setPassword(/*ui->passwordLineEdit->text()*/ "blockemail1234");
+    if(ui->emailLineEdit->hasAcceptableInput()) {
+       emailCore->setUser(ui->emailLineEdit->text());
+    }else {
+        QMessageBox::information(0, "Warning!", "Email isn't correct");
+    }
+
+    emailCore->setPassword(ui->passwordLineEdit->text());
     if (!emailCore->connectToHost()) {
         qDebug() << "Failed to connect to host!" << endl;
         return;

@@ -1,6 +1,7 @@
 #ifndef SIMPLETEXTFORM_H
 #define SIMPLETEXTFORM_H
 #include <QWidget>
+#include <QMessageBox>
 #include "./src/SmtpMime"
 namespace Ui{
 class SimpleTextForm;

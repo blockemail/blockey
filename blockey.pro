@@ -48,8 +48,7 @@ HEADERS  += \
     src/SmtpMime \
     src/quotedprintable.h \
     src/mimemultipart.h \
-    src/mimecontentformatter.h \
-    src/smtpexports.h
+    src/mimecontentformatter.h
 
 
 FORMS    += mainwindow.ui \

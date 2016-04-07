@@ -15,8 +15,9 @@ SimpleTextForm::~SimpleTextForm()
     delete ui;
 }
 void SimpleTextForm::send(){
+
     MimeMessage message;
-    EmailAddress sender("your_email_address@host.com", "Your Name");
+    EmailAddress sender(emailCore->getUser(), "Your Name");
     message.setSender(&sender);
     EmailAddress to(ui->recepientLineEdit->text(),"sup");
     message.addRecipient(&to);

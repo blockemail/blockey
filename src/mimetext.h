@@ -21,7 +21,7 @@
 
 #include "mimepart.h"
 
-#include "smtpexports.h"
+
 
 class  MimeText : public MimePart
 {

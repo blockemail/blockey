@@ -24,7 +24,7 @@
 #include "emailaddress.h"
 #include <QList>
 
-#include "smtpexports.h"
+
 
 class  MimeMessage : public QObject
 {

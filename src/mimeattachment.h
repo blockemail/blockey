@@ -23,7 +23,7 @@
 #include "mimepart.h"
 #include "mimefile.h"
 
-#include "smtpexports.h"
+
 
 class  MimeAttachment : public MimeFile
 {

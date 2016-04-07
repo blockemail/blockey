@@ -22,7 +22,7 @@
 #include "mimepart.h"
 #include <QFile>
 
-#include "smtpexports.h"
+
 
 class  MimeFile : public MimePart
 {

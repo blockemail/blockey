@@ -32,8 +32,8 @@ void LoginForm::login(){
         qDebug() << "Failed to login!" << endl;
         return;
     }
-    SimpleTextForm *stf= new SimpleTextForm(emailCore);
-    stf->show();
+    TypePickForm *tpf = new TypePickForm(emailCore);
+    tpf->show();
     this->hide();
 
 

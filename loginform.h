@@ -1,7 +1,8 @@
 #ifndef LOGINFORM_H
 #define LOGINFORM_H
 #include <QWidget>
-#include "simpletextform.h"
+#include "typepickform.h"
+
 #include "./src/SmtpMime"
 namespace Ui{
 class LoginForm;

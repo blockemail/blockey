@@ -27,11 +27,13 @@ void LoginForm::login(){
     emailCore->setPassword(ui->passwordLineEdit->text());
     if (!emailCore->connectToHost()) {
         qDebug() << "Failed to connect to host!" << endl;
+        QMessageBox::information(0, "Warning!", "Failed to connect to host!");
         return;
     }
 
     if (!emailCore->login()) {
         qDebug() << "Failed to login!" << endl;
+        QMessageBox::information(0, "Warning!", "Failed to login!");
         return;
     }
     TypePickForm *tpf = new TypePickForm(emailCore);

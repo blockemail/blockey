@@ -15,23 +15,22 @@ SimpleTextForm::~SimpleTextForm()
     delete ui;
 }
 void SimpleTextForm::send(){
-    /*
+
     MimeMessage message;
-    EmailAddress sender(emailCore->getUser(), "Your Name");
+    EmailAddress sender(emailCore->getUser(), ui->fromNameLineEdit->text());
     message.setSender(&sender);
-    EmailAddress to(ui->recepientLineEdit->text(),"sup");
+    EmailAddress to(ui->recepientLineEdit->text());
     message.addRecipient(&to);
-    message.setSubject("Demo");
+    message.setSubject(ui->themeLlineEdit->text());
     MimeText text;
     text.setText(ui->plainTextEdit->toPlainText());
     message.addPart(&text);
 
     if (!emailCore->sendMail(message)) {
         qDebug() << "Failed to send mail!" << endl;
+        QMessageBox::information(0, "Warning!", "You are not fill all fields!");
     } else {
         QMessageBox::information(0, "Information", "Message send succesfully!");
-    }*/
-    this->hide();
-    this->show();
+    }
 
 }

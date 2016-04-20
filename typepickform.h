@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include "simpletextform.h"
+#include "htmlform.h"
+
 #include "./src/SmtpMime"
 
 namespace Ui{

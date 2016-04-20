@@ -24,7 +24,8 @@ void TypePickForm::pick(){
          SimpleTextForm *stf= new SimpleTextForm(emailCore);
          stf->show();
       } else {
-          qDebug() << "html!" << endl;
+         HtmlForm *hf= new HtmlForm(emailCore);
+         hf->show();
      }
      this->hide();
 }

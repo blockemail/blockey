@@ -15,7 +15,7 @@ SimpleTextForm::~SimpleTextForm()
     delete ui;
 }
 void SimpleTextForm::send(){
-
+    /*
     MimeMessage message;
     EmailAddress sender(emailCore->getUser(), "Your Name");
     message.setSender(&sender);
@@ -30,6 +30,8 @@ void SimpleTextForm::send(){
         qDebug() << "Failed to send mail!" << endl;
     } else {
         QMessageBox::information(0, "Information", "Message send succesfully!");
-    }
+    }*/
+    this->hide();
+    this->show();
 
 }

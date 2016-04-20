@@ -9,6 +9,8 @@ LoginForm::LoginForm(SmtpClient *email,QWidget *parent) :
     ui->setupUi(this);
     ui->emailLineEdit->setValidator(new QRegExpValidator( QRegExp( "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}"),this ) );
     connect(ui->loginButton,SIGNAL(clicked(bool)),this,SLOT(login()));
+    ui->emailLineEdit->setText("htmlblockeditor@gmail.com");
+    ui->passwordLineEdit->setText("blockemail1234");
 }
 
 LoginForm::~LoginForm()

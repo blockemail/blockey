@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui network
+QT += webkitwidgets
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,12 +18,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     loginform.cpp \
     simpletextform.cpp \
-    typepcikform.cpp
+    typepcikform.cpp \
+    htmlform.cpp \
+    highlighter.cpp
 
 HEADERS  += mainwindow.h \
     loginform.h \
     simpletextform.h \
-    typepickform.h
+    typepickform.h \
+    htmlform.h \
+    highlighter.h
 
 SOURCES += \
     src/emailaddress.cpp \
@@ -56,4 +62,5 @@ HEADERS  += \
 FORMS    += mainwindow.ui \
     loginform.ui \
     simpletextform.ui \
-    typepickform.ui
+    typepickform.ui \
+    htmlform.ui

@@ -2,6 +2,7 @@
 #define SIMPLETEXTFORM_H
 #include <QWidget>
 #include <QMessageBox>
+#include "typepickform.h"
 #include "./src/SmtpMime"
 namespace Ui{
 class SimpleTextForm;
@@ -15,6 +16,7 @@ public:
     ~SimpleTextForm();
 public slots:
     void send();
+    void back();
 private:
     SmtpClient *emailCore;
     Ui::SimpleTextForm *ui;

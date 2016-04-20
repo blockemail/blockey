@@ -8,6 +8,7 @@ SimpleTextForm::SimpleTextForm(SmtpClient *email,QWidget *parent) :
     emailCore = email;
     ui->setupUi(this);
     connect(ui->sendButton,SIGNAL(clicked(bool)),this,SLOT(send()));
+    connect(ui->backButton,SIGNAL(clicked(bool)),this,SLOT(back()));
 }
 
 SimpleTextForm::~SimpleTextForm()
@@ -33,4 +34,10 @@ void SimpleTextForm::send(){
         QMessageBox::information(0, "Information", "Message send succesfully!");
     }
 
+}
+
+void SimpleTextForm::back() {
+    this->hide();
+    TypePickForm *tpf = new TypePickForm(emailCore);
+    tpf->show();
 }

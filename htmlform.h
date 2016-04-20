@@ -2,6 +2,7 @@
 #define HTMLFORM_H
 #include <QWidget>
 #include <QMessageBox>
+#include "typepickform.h"
 #include "./src/SmtpMime"
 namespace Ui{
 class HtmlForm;
@@ -15,6 +16,7 @@ public:
     ~HtmlForm();
 public slots:
     void change();
+    void back();
 private:
     SmtpClient *emailCore;
     Ui::HtmlForm *ui;

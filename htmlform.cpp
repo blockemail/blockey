@@ -9,7 +9,9 @@ HtmlForm::HtmlForm(SmtpClient *email,QWidget *parent) :
 {
     emailCore = email;
     ui->setupUi(this);
-    connect(ui->block1Button,SIGNAL(clicked(bool)),this,SLOT(change()));
+    connect(ui->backButton,SIGNAL(clicked(bool)),this,SLOT(back()));
+
+    connect(ui->block1Button,SIGNAL(clicked(bool)),this,SLOT(change()));    
     Highlighter *hl = new Highlighter(ui->textEdit->document());
     QString preset = "";
     preset.append("<html>\n");
@@ -42,4 +44,10 @@ void HtmlForm::change(){
 
     //ui->webView->setHtml(html);
     //ui->webView->reload();
+}
+
+void HtmlForm::back() {
+    this->hide();
+    TypePickForm *tpf = new TypePickForm(emailCore);
+    tpf->show();
 }

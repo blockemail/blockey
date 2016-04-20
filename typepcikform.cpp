@@ -10,6 +10,7 @@ TypePickForm::TypePickForm(SmtpClient *email,QWidget *parent) :
     ui->setupUi(this);
     connect(ui->plainTextButton,SIGNAL(clicked(bool)),this,SLOT(pick()));
     connect(ui->htmlButton,SIGNAL(clicked(bool)),this,SLOT(pick()));
+    connect(ui->backButton,SIGNAL(clicked(bool)),this,SLOT(backToLogin()));
 }
 
 TypePickForm::~TypePickForm()
@@ -28,4 +29,10 @@ void TypePickForm::pick(){
          hf->show();
      }
      this->hide();
+}
+void TypePickForm::backToLogin() {
+    this->hide();
+    emailCore->quit();
+    LoginForm *log = new LoginForm(emailCore);
+    log->show();
 }

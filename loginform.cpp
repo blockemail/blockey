@@ -40,5 +40,4 @@ void LoginForm::login(){
     tpf->show();
     this->hide();
 
-
 }

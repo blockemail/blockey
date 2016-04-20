@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "simpletextform.h"
 #include "htmlform.h"
+#include "loginform.h"
 
 #include "./src/SmtpMime"
 
@@ -19,6 +20,7 @@ public:
     ~TypePickForm();
 public slots:
     void pick();
+    void backToLogin();
 private:
     SmtpClient *emailCore;
     Ui::TypePickForm *ui;

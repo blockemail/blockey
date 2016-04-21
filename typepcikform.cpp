@@ -28,7 +28,7 @@ void TypePickForm::pick(){
          HtmlForm *hf= new HtmlForm(emailCore);
          hf->show();
      }
-     this->hide();
+     this->~TypePickForm();
 }
 void TypePickForm::backToLogin() {
     this->hide();

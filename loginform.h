@@ -2,6 +2,7 @@
 #define LOGINFORM_H
 #include <QWidget>
 #include "typepickform.h"
+#include "sendform.h"
 
 #include "./src/SmtpMime"
 namespace Ui{

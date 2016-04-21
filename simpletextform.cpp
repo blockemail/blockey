@@ -7,7 +7,7 @@ SimpleTextForm::SimpleTextForm(SmtpClient *email,QWidget *parent) :
 {
     emailCore = email;
     ui->setupUi(this);
-    connect(ui->sendButton,SIGNAL(clicked(bool)),this,SLOT(send()));
+    connect(ui->proceedButton,SIGNAL(clicked(bool)),this,SLOT(send()));
     connect(ui->backButton,SIGNAL(clicked(bool)),this,SLOT(back()));
 }
 
@@ -17,22 +17,12 @@ SimpleTextForm::~SimpleTextForm()
 }
 void SimpleTextForm::send(){
 
-    MimeMessage message;
-    EmailAddress sender(emailCore->getUser(), ui->fromNameLineEdit->text());
-    message.setSender(&sender);
-    EmailAddress to(ui->recepientLineEdit->text());
-    message.addRecipient(&to);
-    message.setSubject(ui->themeLlineEdit->text());
+
     MimeText text;
     text.setText(ui->plainTextEdit->toPlainText());
-    message.addPart(&text);
-
-    if (!emailCore->sendMail(message)) {
-        qDebug() << "Failed to send mail!" << endl;
-        QMessageBox::information(0, "Warning!", "You are not fill all fields!");
-    } else {
-        QMessageBox::information(0, "Information", "Message send succesfully!");
-    }
+    this->hide();
+    SendForm *sf = new SendForm(emailCore,ui->plainTextEdit->toPlainText(),this);
+    sf->show();
 
 }
 

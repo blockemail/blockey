@@ -11,6 +11,7 @@ LoginForm::LoginForm(SmtpClient *email,QWidget *parent) :
     connect(ui->loginButton,SIGNAL(clicked(bool)),this,SLOT(login()));
     ui->emailLineEdit->setText("htmlblockeditor@gmail.com");
     ui->passwordLineEdit->setText("blockemail1234");
+
 }
 
 LoginForm::~LoginForm()
@@ -36,8 +37,8 @@ void LoginForm::login(){
         QMessageBox::information(0, "Warning!", "Failed to login!");
         return;
     }
+
     TypePickForm *tpf = new TypePickForm(emailCore);
     tpf->show();
     this->hide();
-
 }

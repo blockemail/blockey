@@ -17,36 +17,6 @@
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>To</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="recepientLineEdit"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>From name</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="fromNameLineEdit"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Theme</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="themeLlineEdit"/>
-     </item>
-     <item>
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Message</string>
@@ -79,9 +49,9 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="sendButton">
+        <widget class="QPushButton" name="proceedButton">
          <property name="text">
-          <string>Send</string>
+          <string>Proceed</string>
          </property>
         </widget>
        </item>

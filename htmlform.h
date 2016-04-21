@@ -17,6 +17,12 @@ public:
 public slots:
     void change();
     void back();
+    void send();
+    void appendBlock1();
+    void appendBlock2();
+    void appendBlock3();
+    void appendBlock4();
+    void appendBlock5();
 private:
     SmtpClient *emailCore;
     Ui::HtmlForm *ui;

@@ -85,7 +85,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Изображения/text-html-icon.png</normaloff>../../Изображения/text-html-icon.png</iconset>
+           <normaloff>icons/text-html-icon.png</normaloff>icons/text-html-icon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -129,7 +129,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Изображения/text-plain-icon.png</normaloff>../../Изображения/text-plain-icon.png</iconset>
+           <normaloff>icons/text-plain-icon.png</normaloff>icons/text-plain-icon.png</iconset>
          </property>
          <property name="iconSize">
           <size>

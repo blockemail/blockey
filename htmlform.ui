@@ -48,7 +48,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Изображения/block_1@2x.png</normaloff>../../Изображения/block_1@2x.png</iconset>
+          <normaloff>icons/block_1@2x.png</normaloff>icons/block_1@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -71,7 +71,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Изображения/block_2@2x.png</normaloff>../../Изображения/block_2@2x.png</iconset>
+          <normaloff>icons/block_2@2x.png</normaloff>icons/block_2@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -94,7 +94,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Изображения/block_3@2x.png</normaloff>../../Изображения/block_3@2x.png</iconset>
+          <normaloff>icons/block_3@2x.png</normaloff>icons/block_3@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -117,7 +117,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Изображения/block_4@2x.png</normaloff>../../Изображения/block_4@2x.png</iconset>
+          <normaloff>icons/block_4@2x.png</normaloff>icons/block_4@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -140,7 +140,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Изображения/block_5@2x.png</normaloff>../../Изображения/block_5@2x.png</iconset>
+          <normaloff>icons/block_5@2x.png</normaloff>icons/block_5@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -164,14 +164,14 @@
     </widget>
    </item>
    <item row="0" column="2">
-    <widget class="QWebView" name="webView" native="true">
+    <widget class="QWebView" name="webView">
      <property name="maximumSize">
       <size>
        <width>375</width>
        <height>600</height>
       </size>
      </property>
-     <property name="url" stdset="0">
+     <property name="url">
       <url>
        <string>about:blank</string>
       </url>
@@ -201,9 +201,9 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="sendButton">
+      <widget class="QPushButton" name="proceedButton">
        <property name="text">
-        <string>Send</string>
+        <string>Proceed</string>
        </property>
       </widget>
      </item>
@@ -213,7 +213,6 @@
   <zorder>webView</zorder>
   <zorder>textEdit</zorder>
   <zorder>groupBox</zorder>
-  <zorder>horizontalLayoutWidget</zorder>
  </widget>
  <customwidgets>
   <customwidget>

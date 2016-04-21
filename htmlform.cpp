@@ -10,8 +10,14 @@ HtmlForm::HtmlForm(SmtpClient *email,QWidget *parent) :
     emailCore = email;
     ui->setupUi(this);
     connect(ui->backButton,SIGNAL(clicked(bool)),this,SLOT(back()));
+    connect(ui->proceedButton,SIGNAL(clicked(bool)),this,SLOT(send()));
+    connect(ui->textEdit,SIGNAL(textChanged()),this,SLOT(change()));
+    connect(ui->block1Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock1()));
+    connect(ui->block2Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock2()));
+    connect(ui->block3Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock3()));
+    connect(ui->block4Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock4()));
+    connect(ui->block5Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock5()));
 
-    connect(ui->block1Button,SIGNAL(clicked(bool)),this,SLOT(change()));    
     Highlighter *hl = new Highlighter(ui->textEdit->document());
     QString preset = "";
     preset.append("<html>\n");
@@ -37,13 +43,9 @@ HtmlForm::~HtmlForm()
     delete ui;
 }
 void HtmlForm::change(){
-    //QString html = "<html>\n\t<body><p style=\"color: red;\">This is a paragraph.</p><p>This is a paragraph.</p><p>This is a paragraph.</p></body></html>";
-    //QString test = "123";
-    //ui->textEdit->setText(html);
-    //ui->textEdit->setPlainText(html);
 
-    //ui->webView->setHtml(html);
-    //ui->webView->reload();
+
+    ui->webView->setHtml(ui->textEdit->toPlainText());
 }
 
 void HtmlForm::back() {
@@ -51,3 +53,35 @@ void HtmlForm::back() {
     TypePickForm *tpf = new TypePickForm(emailCore);
     tpf->show();
 }
+void HtmlForm::send() {
+
+    MimeHtml html;
+
+    html.setHtml(ui->textEdit->toPlainText());
+
+    this->hide();
+    SendForm *sf = new SendForm(emailCore,ui->textEdit->toPlainText(),this);
+    sf->show();
+
+}
+void HtmlForm::appendBlock1(){
+    QTextCursor cursor = ui->textEdit->textCursor();
+    cursor.insertText("block1");
+}
+void HtmlForm::appendBlock2(){
+    QTextCursor cursor = ui->textEdit->textCursor();
+    cursor.insertText("block2");
+}
+void HtmlForm::appendBlock3(){
+    QTextCursor cursor = ui->textEdit->textCursor();
+    cursor.insertText("block3");
+}
+void HtmlForm::appendBlock4(){
+    QTextCursor cursor = ui->textEdit->textCursor();
+    cursor.insertText("block4");
+}
+void HtmlForm::appendBlock5(){
+    QTextCursor cursor = ui->textEdit->textCursor();
+    cursor.insertText("block5");
+}
+

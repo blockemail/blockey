@@ -20,14 +20,16 @@ SOURCES += main.cpp\
     simpletextform.cpp \
     typepcikform.cpp \
     htmlform.cpp \
-    highlighter.cpp
+    highlighter.cpp \
+    sendform.cpp
 
 HEADERS  += mainwindow.h \
     loginform.h \
     simpletextform.h \
     typepickform.h \
     htmlform.h \
-    highlighter.h
+    highlighter.h \
+    sendform.h
 
 SOURCES += \
     src/emailaddress.cpp \
@@ -63,4 +65,5 @@ FORMS    += mainwindow.ui \
     loginform.ui \
     simpletextform.ui \
     typepickform.ui \
-    htmlform.ui
+    htmlform.ui \
+    sendform.ui

@@ -3,6 +3,7 @@
 #include <QWidget>
 #include <QMessageBox>
 #include "typepickform.h"
+#include "sendform.h"
 #include "./src/SmtpMime"
 namespace Ui{
 class SimpleTextForm;

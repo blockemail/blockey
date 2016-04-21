@@ -1,0 +1,12 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>icons/block_1@2x.png</file>
+    <file>icons/block_2@2x.png</file>
+    <file>icons/block_3@2x.png</file>
+    <file>icons/block_4@2x.png</file>
+    <file>icons/block_5@2x.png</file>
+    <file>icons/text-html-icon.png</file>
+    <file>icons/text-plain-icon.png</file>
+    <file>icons/180x77.png</file>
+</qresource>
+</RCC>

@@ -4,6 +4,8 @@
 #include <QMessageBox>
 #include "typepickform.h"
 #include "./src/SmtpMime"
+#include <QFileDialog>
+
 namespace Ui{
 class HtmlForm;
 }
@@ -23,6 +25,7 @@ public slots:
     void appendBlock3();
     void appendBlock4();
     void appendBlock5();
+    void save();
 private:
     SmtpClient *emailCore;
     Ui::HtmlForm *ui;

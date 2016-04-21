@@ -17,7 +17,7 @@ HtmlForm::HtmlForm(SmtpClient *email,QWidget *parent) :
     connect(ui->block3Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock3()));
     connect(ui->block4Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock4()));
     connect(ui->block5Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock5()));
-
+    connect(ui->saveButton,SIGNAL(clicked(bool)),this,SLOT(save()));
     Highlighter *hl = new Highlighter(ui->textEdit->document());
     QString preset = "";
     preset.append("<html>\n");
@@ -66,22 +66,37 @@ void HtmlForm::send() {
 }
 void HtmlForm::appendBlock1(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("block1");
+    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td><td><p>Sample text for block2</p></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock2(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("block2");
+    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td></tr><tr><td><p>Sample text for block2</p></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock3(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("block3");
+    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock4(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("block4");
+    cursor.insertText("<table><tbody><tr><td><p>Sample text for block2</p></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock5(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("block5");
+    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td></tr></tbody></table>");
 }
+void HtmlForm::save(){
 
+    QFileDialog *fd = new QFileDialog(this);
+    QString filename = fd->getSaveFileName(this, "Save file", "", ".html");
+    if(filename.length()>0){
+        QFile f( filename.append(".html"));
+        f.open( QIODevice::WriteOnly );
+        if(f.isOpen()){
+            QTextStream fstream(&f);
+            fstream << ui->textEdit->toPlainText();
+        } else {
+            QMessageBox::information(0, "Warning!", "Cannot open file!");
+        }
+        f.close();
+    }
+}

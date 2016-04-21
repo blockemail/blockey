@@ -67,3 +67,5 @@ FORMS    += mainwindow.ui \
     typepickform.ui \
     htmlform.ui \
     sendform.ui
+RESOURCES += \
+    image.qrc

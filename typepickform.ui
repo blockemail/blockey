@@ -84,8 +84,8 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>icons/text-html-icon.png</normaloff>icons/text-html-icon.png</iconset>
+          <iconset resource="image.qrc">
+           <normaloff>:/icons/text-html-icon.png</normaloff>:/icons/text-html-icon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -128,8 +128,8 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>icons/text-plain-icon.png</normaloff>icons/text-plain-icon.png</iconset>
+          <iconset resource="image.qrc">
+           <normaloff>:/icons/text-plain-icon.png</normaloff>:/icons/text-plain-icon.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -171,6 +171,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

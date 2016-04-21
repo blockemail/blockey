@@ -47,8 +47,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
-          <normaloff>icons/block_1@2x.png</normaloff>icons/block_1@2x.png</iconset>
+         <iconset resource="image.qrc">
+          <normaloff>:/icons/block_1@2x.png</normaloff>:/icons/block_1@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -70,8 +70,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
-          <normaloff>icons/block_2@2x.png</normaloff>icons/block_2@2x.png</iconset>
+         <iconset resource="image.qrc">
+          <normaloff>:/icons/block_2@2x.png</normaloff>:/icons/block_2@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -93,8 +93,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
-          <normaloff>icons/block_3@2x.png</normaloff>icons/block_3@2x.png</iconset>
+         <iconset resource="image.qrc">
+          <normaloff>:/icons/block_3@2x.png</normaloff>:/icons/block_3@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -116,8 +116,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
-          <normaloff>icons/block_4@2x.png</normaloff>icons/block_4@2x.png</iconset>
+         <iconset resource="image.qrc">
+          <normaloff>:/icons/block_4@2x.png</normaloff>:/icons/block_4@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -139,8 +139,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
-          <normaloff>icons/block_5@2x.png</normaloff>icons/block_5@2x.png</iconset>
+         <iconset resource="image.qrc">
+          <normaloff>:/icons/block_5@2x.png</normaloff>:/icons/block_5@2x.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -188,6 +188,29 @@
       </widget>
      </item>
      <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>56</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -221,6 +244,8 @@
    <header>QtWebKitWidgets/QWebView</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

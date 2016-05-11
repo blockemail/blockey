@@ -20,6 +20,7 @@ public slots:
     void change();
     void back();
     void send();
+    void open();
     void appendBlock1();
     void appendBlock2();
     void appendBlock3();

@@ -18,6 +18,7 @@ HtmlForm::HtmlForm(SmtpClient *email,QWidget *parent) :
     connect(ui->block4Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock4()));
     connect(ui->block5Button,SIGNAL(clicked(bool)),this,SLOT(appendBlock5()));
     connect(ui->saveButton,SIGNAL(clicked(bool)),this,SLOT(save()));
+    connect(ui->openButton,SIGNAL(clicked(bool)),this,SLOT(open()));
     Highlighter *hl = new Highlighter(ui->textEdit->document());
     QString preset = "";
     preset.append("<html>\n");
@@ -94,6 +95,27 @@ void HtmlForm::save(){
         if(f.isOpen()){
             QTextStream fstream(&f);
             fstream << ui->textEdit->toPlainText();
+        } else {
+            QMessageBox::information(0, "Warning!", "Cannot open file!");
+        }
+        f.close();
+    }
+}
+
+void HtmlForm::open(){
+
+    QFileDialog *fd = new QFileDialog(this);
+    QString filename = fd->getOpenFileName(this);
+    if(filename.length()>0){
+        QFile f(filename);
+        f.open( QIODevice::ReadOnly );
+        QString str="";
+        if(f.isOpen()){
+            QTextStream fstream(&f);
+
+                str.append(fstream.readAll());
+
+            ui->textEdit->setPlainText(str);
         } else {
             QMessageBox::information(0, "Warning!", "Cannot open file!");
         }

@@ -26,7 +26,7 @@ HtmlForm::HtmlForm(SmtpClient *email,QWidget *parent) :
     preset.append("       <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" style=\"width:100%;\">\n");
     preset.append("        <tbody>\n");
     preset.append("          <tr>\n");
-    preset.append("            <td>\n");
+    preset.append("            <td align=\"center\">\n");
     preset.append("            </td>\n");
     preset.append("          </tr>\n");
     preset.append("        </tbody>\n");
@@ -66,23 +66,23 @@ void HtmlForm::send() {
 }
 void HtmlForm::appendBlock1(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td><td><p>Sample text for block2</p></td></tr></tbody></table>");
+    cursor.insertText("<table><tbody><tr><td align=\"center\"><img style=\"width:180px;\" src=\"http://cs623225.vk.me/v623225366/1e8b6/b4ggn5BYw1Y.jpg\"></td><td align=\"center\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in fermentum erat, nec sodales massa. Maecenas et vulputate massa, ac sodales enim. Donec lacinia non quam at semper.</p></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock2(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td></tr><tr><td><p>Sample text for block2</p></td></tr></tbody></table>");
+    cursor.insertText("<table><tbody><tr><td align=\"center\"><img style=\"width:180px;\" src=\"http://cs623225.vk.me/v623225366/1e8b6/b4ggn5BYw1Y.jpg\"></td></tr><tr><td align=\"center\"><p>Vestibulum lectus nisl, efficitur in massa non, gravida laoreet velit. In tristique mi elementum libero pulvinar, et fermentum sapien imperdiet. Ut dolor tortor, commodo ac diam a, rhoncus hendrerit nibh. Etiam pretium efficitur elit, sed commodo urna pretium vitae. </p></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock3(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td></tr></tbody></table>");
+    cursor.insertText("<table><tbody><tr><td align=\"center\"><img style=\"width:180px;\" src=\"http://cs623225.vk.me/v623225366/1e8b6/b4ggn5BYw1Y.jpg\"></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock4(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("<table><tbody><tr><td><p>Sample text for block2</p></td></tr></tbody></table>");
+    cursor.insertText("<table><tbody><tr><td align=\"center\"><p>Vestibulum lectus nisl, efficitur in massa non, gravida laoreet velit. In tristique mi elementum libero pulvinar, et fermentum sapien imperdiet. Ut dolor tortor, commodo ac diam a, rhoncus hendrerit nibh. Etiam pretium efficitur elit, sed commodo</p></td></tr></tbody></table>");
 }
 void HtmlForm::appendBlock5(){
     QTextCursor cursor = ui->textEdit->textCursor();
-    cursor.insertText("<table><tbody><tr><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td><td><img src=\"https://app.sendsay.ru/img/placeholders/180x77.png\"></td></tr></tbody></table>");
+    cursor.insertText("<table><tbody><tr><td align=\"center\"><img style=\"width:180px;\" src=\"http://cs623225.vk.me/v623225366/1e8b6/b4ggn5BYw1Y.jpg\"></td><td align=\"center\"><img style=\"width:180px;\" src=\"http://cs623225.vk.me/v623225366/1e8b6/b4ggn5BYw1Y.jpg\"></td></tr><tr><td align=\"center\"><p>Vestibulum lectus nisl, efficitur in massa non, gravida laoreet velit.</p></td><td align=\"center\"><p>Vestibulum lectus nisl, efficitur in massa non, gravida laoreet velit.</p></td></tr></tbody></table>");
 }
 void HtmlForm::save(){
 
